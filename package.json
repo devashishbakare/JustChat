@@ -10,8 +10,12 @@
   "author": "Devashish Bakare",
   "license": "ISC",
   "dependencies": {
+    "@chakra-ui/react": "^2.5.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "framer-motion": "^10.3.2",
     "nodemon": "^2.0.21"
   }
 }
