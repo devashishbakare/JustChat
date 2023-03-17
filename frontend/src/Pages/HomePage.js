@@ -1,6 +1,5 @@
 import {
   Box,
-  Center,
   Container,
   Tab,
   TabList,
@@ -35,7 +34,7 @@ function Homepage() {
         borderRadius="lg"
         borderWidth="1px"
       >
-        <Text fontSize="4xl" fontFamily="'Open Sans', sans-serif" textAlign= "center" fontWeight="bold">
+        <Text fontSize="4xl" fontFamily="Work sans" alignContent="center" marginLeft="180px">
           Just Chat
         </Text>
       </Box>
