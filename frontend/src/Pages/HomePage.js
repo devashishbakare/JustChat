@@ -1,5 +1,6 @@
 import {
   Box,
+  Center,
   Container,
   Tab,
   TabList,
@@ -8,12 +9,20 @@ import {
   Tabs,
   Text,
 } from "@chakra-ui/react";
-
+import { useEffect } from "react";
+import { useHistory } from "react-router";
 import Login from "../components/Authentication/Login";
 import Signup from "../components/Authentication/Sign-up";
 
 function Homepage() {
-  
+  const history = useHistory();
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("userInfo"));
+
+    if (user) history.push("/chats");
+  }, [history]);
+
   return (
     <Container maxW="xl" centerContent>
       <Box
@@ -26,17 +35,8 @@ function Homepage() {
         borderRadius="lg"
         borderWidth="1px"
       >
-        <Text 
-          fontSize="4xl" 
-          // fontFamily="Work sans"
-          textAlign="center"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          fontFamily="Open Sans,  sans-serif"
-          fontWeight= "bold"
-        >
-         Just Chat 
+        <Text fontSize="4xl" fontFamily="'Open Sans', sans-serif" textAlign= "center" fontWeight="bold">
+          Just Chat
         </Text>
       </Box>
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
